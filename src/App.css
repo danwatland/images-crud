@@ -1,0 +1,35 @@
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.image-preview {
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    width: 340px;
+}
+
+.image-preview img {
+    flex-grow: 1;
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.image-info {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.image-info span {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+

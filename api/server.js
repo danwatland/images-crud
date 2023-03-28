@@ -19,6 +19,7 @@ const upload = multer({ storage });
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('./api/images'))
 
 app.get('/images', (req, res) => {
   const images = getImages();
