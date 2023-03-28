@@ -3,6 +3,16 @@
     justify-content: space-between;
 }
 
+.image-crud-loading-bar {
+    align-items: center;
+    display: flex;
+    height: 36px;
+}
+
+.image-crud-loading-bar span {
+    width: 100%;
+}
+
 .image-container {
     display: flex;
     flex-wrap: wrap;
