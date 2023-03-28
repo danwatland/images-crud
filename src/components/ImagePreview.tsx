@@ -11,7 +11,7 @@ interface ImagePreviewProps {
 const ImagePreview = ({ src }: ImagePreviewProps): React.ReactElement => {
   const deleteImage = useImageStore((state) => state.deleteImage);
 
-  const removeExtraFilenameData = (filename: string): string => filename.replace(`${API_URL}/`, '').substring(15);
+  const removeExtraFilenameData = (filename: string): string => filename.replace(`${API_URL}/`, '').substring(14);
 
   return (
     <div className='image-preview'>

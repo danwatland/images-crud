@@ -1,5 +1,8 @@
 {
   "clearMocks": true,
+  "globals": {
+    "API_URL": true
+  },
   "testEnvironment": "jsdom",
   "preset": "ts-jest",
   "setupFilesAfterEnv": ["./test/jest-setup.ts"]
