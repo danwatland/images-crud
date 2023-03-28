@@ -6,5 +6,8 @@ export default defineConfig({
   define: {
     API_URL: JSON.stringify(`http://localhost:${process.env.PORT || 5174}`)
   },
+  server: {
+    open: true
+  },
   plugins: [react()],
 })
