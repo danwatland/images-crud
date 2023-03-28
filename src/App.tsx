@@ -1,11 +1,11 @@
 import * as React from 'react'
 import './App.css'
-import { ImagePreview } from './components/ImagePreview';
 import { Button, TextField } from '@mui/material';
-import { uploadImage } from './services/ImageService';
 import { ImageContainer } from './components/ImageContainer';
+import { useImageStore } from './state/ImageStore';
 
 const App = (): React.ReactElement => {
+  const uploadImage = useImageStore((state) => state.uploadImage);
   const [searchText, setSearchText] = React.useState<string>();
 
   return (

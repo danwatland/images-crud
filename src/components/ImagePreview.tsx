@@ -2,13 +2,15 @@ import * as React from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { deleteImage } from '../services/ImageService';
+import { useImageStore } from '../state/ImageStore';
 
 interface ImagePreviewProps {
   src: string
 }
 
 const ImagePreview = ({ src }: ImagePreviewProps): React.ReactElement => {
+  const deleteImage = useImageStore((state) => state.deleteImage);
+
   const removeExtraFilenameData = (filename: string): string => filename.replace('http://localhost:5174', '').substring(15);
 
   return (

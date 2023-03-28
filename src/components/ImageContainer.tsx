@@ -1,18 +1,12 @@
 import * as React from 'react';
-import { getImages } from '../services/ImageService';
 import { ImagePreview } from './ImagePreview';
+import { useImageStore } from '../state/ImageStore';
 
 const ImageContainer = () => {
-  const [images, setImages] = React.useState([]);
+  const { images, getImages } = useImageStore((state) => ({ images: state.images, getImages: state.getImages }));
 
   React.useEffect(() => {
-    const fetchImages = async () => {
-      const im = await getImages();
-
-      setImages(im);
-    };
-
-    fetchImages();
+    getImages();
   }, []);
 
   return (
