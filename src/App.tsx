@@ -6,7 +6,7 @@ import { useImageStore } from './state/ImageStore';
 
 const App = (): React.ReactElement => {
   const uploadImage = useImageStore((state) => state.uploadImage);
-  const [searchText, setSearchText] = React.useState<string>();
+  const [searchText, setSearchText] = React.useState<string>('');
 
   return (
     <>
@@ -22,7 +22,7 @@ const App = (): React.ReactElement => {
           <input hidden type='file' accept='image/*' onChange={(e) => uploadImage(e.target.files!)}/>
         </Button>
       </div>
-      <ImageContainer />
+      <ImageContainer searchText={searchText}/>
     </>
   )
 };
