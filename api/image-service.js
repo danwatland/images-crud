@@ -1,23 +1,19 @@
-const fs = require('fs');
+import fs from 'fs';
 
-function getImages() {
-  const files = fs.readdirSync('./images');
+export function getImages() {
+  const files = fs.readdirSync('./api/images');
 
   return files;
 }
 
-function saveImage(filename) {
-  // need to check what gets sent
-}
-
-function deleteImage(filename) {
-  if (fs.existsSync(`./images/${filename}`)) {
-    fs.rmSync(`./images/${filename}`);
+export function initialize() {
+  if (!fs.existsSync('./api/images')) {
+    fs.mkdirSync('./api/images');
   }
 }
 
-module.exports = {
-  getImages,
-  saveImage,
-  deleteImage,
+export function deleteImage(filename) {
+  if (fs.existsSync(`./api/images/${filename}`)) {
+    fs.rmSync(`./api/images/${filename}`);
+  }
 }
