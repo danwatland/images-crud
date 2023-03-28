@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 import { deleteImage, getImages, uploadImage } from '../services/ImageService';
 
 interface ImageStore {

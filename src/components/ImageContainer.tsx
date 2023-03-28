@@ -24,7 +24,7 @@ const ImageContainer = ({ searchText }: ImageContainerProps) => {
   return (
     <div className='image-container'>
       { images.filter(filterImages).map((img, i) => (
-        <ImagePreview src={`http://localhost:5174/${img}`} key={i} />
+        <ImagePreview src={`${API_URL}/${img}`} key={i} />
       )) }
     </div>
   );
