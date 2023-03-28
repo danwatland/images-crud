@@ -12,3 +12,7 @@ export async function uploadImage(images: FileList): Promise<void> {
 
   await axios.post('http://localhost:5174/images', formData);
 }
+
+export async function deleteImage(imageName: string): Promise<void> {
+  await axios.delete(`http://localhost:5174/images/${imageName.replace('http://localhost:5174/', '')}`);
+}

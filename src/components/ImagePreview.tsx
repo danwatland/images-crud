@@ -2,6 +2,7 @@ import * as React from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import { deleteImage } from '../services/ImageService';
 
 interface ImagePreviewProps {
   src: string
@@ -15,7 +16,7 @@ const ImagePreview = ({ src }: ImagePreviewProps): React.ReactElement => {
       <img alt={src} src={src} />
       <div className='image-info'>
         <Typography variant='caption' color='#242424'>{removeExtraFilenameData(src)}</Typography>
-        <IconButton onClick={() => {}}>
+        <IconButton onClick={() => deleteImage(src)}>
           <DeleteIcon />
         </IconButton>
       </div>

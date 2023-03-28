@@ -10,15 +10,18 @@ const App = (): React.ReactElement => {
 
   return (
     <>
-      <TextField
-        label='Search images'
-        onChange={(event) => setSearchText(event.target.value)}
-        value={searchText}
-      />
-      <Button component='label'>
-        Upload
-        <input hidden type='file' accept='image/*' onChange={(e) => uploadImage(e.target.files!)}/>
-      </Button>
+      <div className='image-crud-header'>
+        <TextField
+          label='Search images'
+          onChange={(event) => setSearchText(event.target.value)}
+          sx={{ width: '50%' }}
+          value={searchText}
+        />
+        <Button component='label' variant='contained'>
+          Upload
+          <input hidden type='file' accept='image/*' onChange={(e) => uploadImage(e.target.files!)}/>
+        </Button>
+      </div>
       <ImageContainer />
     </>
   )

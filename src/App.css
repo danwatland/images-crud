@@ -1,7 +1,11 @@
+.image-crud-header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .image-container {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
 }
 
 .image-preview {
