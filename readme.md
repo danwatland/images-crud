@@ -6,6 +6,8 @@ npm i
 npm start
 ```
 
+I tested this on Mac and Windows with Node versions 18.12.0 and 16.16.0, respectively.
+
 ### Approximate time to finish
 This was fairly straightforward and took about 4 hours to finish. 
 
